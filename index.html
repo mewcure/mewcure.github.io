@@ -4,6 +4,27 @@
 </script>
 
 <script type="text/javascript">
+  var ciLoaded = false;
+  var environment;
+  	(function () {
+			window.addEventListener("CIFInitDone", function (contextCIF, a, b, c) {
+				ciLoaded = true;
+				//debugger;
+
+
+				console.log("CIF started Loading");
+
+				Microsoft.CIFramework.getEnvironment().then(function (zc) {
+					environment = JSON.parse(zc);
+					console.log("SMS all good:" + zc);
+				}, function (fail) {
+					console.log("SMS fail:" + fail);
+				});
+
+			});
+
+
+		})();
 </script>
 
 </head>
