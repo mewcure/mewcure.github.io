@@ -11,7 +11,22 @@
 				ciLoaded = true;
 				//debugger;
 
-
+				Microsoft.CIFramework.addHandler("onmodechanged", function(d){
+				console.log("on mode change:");
+					console.log(d);
+				});
+					Microsoft.CIFramework.addHandler("onmodechanged", function(d){
+				console.log("onmodechange:");
+					console.log(d);
+				});
+					Microsoft.CIFramework.addHandler("onpagenavigate", function(d){
+				console.log("onpagenavigate :");
+					console.log(d);
+				});
+					Microsoft.CIFramework.addHandler("onsizechanged", function(d){
+				console.log("onsizechanged:");
+					console.log(d);
+				});
 				console.log("CIF started Loading");
 
 				Microsoft.CIFramework.getEnvironment().then(function (zc) {
